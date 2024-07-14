@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "emi_letsdo_compat",
+  "version": "${version}",
+
+  "name": "emi-letsdo-compat",
+  "description": "",
+  "authors": [],
+  "contact": {},
+
+  "license": "MIT",
+  "icon": "icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.pandaismyname1.emi_letsdo_compat.fabric.Emi_letsdo_compatFabric"
+    ]
+  },
+  "mixins": [
+    "emi_letsdo_compat.mixins.json",
+    "emi_letsdo_compat-common.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "minecraft": ">=1.20.1"
+  }
+}
