@@ -16,5 +16,12 @@
   "emi.category.meadow.cheese": "Cheese Forming",
   "emi.category.meadow.cooking": "Cooking Cauldron",
   "emi.category.meadow.fondue": "Fondue",
-  "emi.category.meadow.woodcutting": "Woodcutting"
+  "emi.category.meadow.woodcutting": "Woodcutting",
+
+  "emi.category.farm_and_charm.pot_cooking": "Pot Cooking",
+  "emi.category.farm_and_charm.crafting_bowl": "Crafting Bowl",
+  "emi.category.farm_and_charm.mincer": "Mincer",
+  "emi.category.farm_and_charm.roaster": "Roaster",
+  "emi.category.farm_and_charm.drying": "Drying",
+  "emi.category.farm_and_charm.stove": "Stove"
 }

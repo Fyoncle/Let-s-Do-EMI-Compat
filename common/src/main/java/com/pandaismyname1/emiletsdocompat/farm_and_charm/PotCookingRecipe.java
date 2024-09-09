@@ -1,4 +1,5 @@
-package com.pandaismyname1.emiletsdocompat.beachparty;
+package com.pandaismyname1.emiletsdocompat.farm_and_charm;
+
 
 import com.pandaismyname1.emiletsdocompat.utils.DisplayUtils;
 import dev.architectury.utils.EnvExecutor;
@@ -12,12 +13,12 @@ import net.minecraft.core.RegistryAccess;
 
 import java.util.function.Supplier;
 
-public class MiniFridgeMixingRecipe extends BasicEmiRecipe {
+public class PotCookingRecipe extends BasicEmiRecipe {
     protected static final Supplier<RegistryAccess> REGISTRY_ACCESS =
             EnvExecutor.getEnvSpecific(() -> () -> () -> GameInstance.getClient().player.level().registryAccess(),
                     () -> () -> () -> GameInstance.getServer().registryAccess());
 
-    public MiniFridgeMixingRecipe(EmiRecipeCategory category, satisfy.beachparty.recipe.MiniFridgeRecipe recipe) {
+    public PotCookingRecipe(EmiRecipeCategory category, net.satisfy.farm_and_charm.recipe.CookingPotRecipe recipe) {
         super(category, recipe.getId(), 70, 18);
         var ingredients = recipe.getIngredients();
         for (var ingredient : ingredients) {
@@ -41,3 +42,5 @@ public class MiniFridgeMixingRecipe extends BasicEmiRecipe {
         return 140;
     }
 }
+
+

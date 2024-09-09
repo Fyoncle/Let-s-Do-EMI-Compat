@@ -1,11 +1,10 @@
 package com.pandaismyname1.emiletsdocompat.bakery;
 
-import com.pandaismyname1.emiletsdocompat.Emi_letsdo_compat;
 import com.pandaismyname1.emiletsdocompat.utils.DisplayUtils;
 import dev.architectury.utils.EnvExecutor;
 import dev.architectury.utils.GameInstance;
 import dev.emi.emi.api.recipe.BasicEmiRecipe;
-import dev.emi.emi.api.render.EmiTexture;
+import dev.emi.emi.api.recipe.EmiRecipeCategory;
 import dev.emi.emi.api.stack.EmiIngredient;
 import dev.emi.emi.api.stack.EmiStack;
 import dev.emi.emi.api.widget.WidgetHolder;
@@ -18,8 +17,8 @@ public class StoveRecipe extends BasicEmiRecipe {
             EnvExecutor.getEnvSpecific(() -> () -> () -> GameInstance.getClient().player.level().registryAccess(),
                     () -> () -> () -> GameInstance.getServer().registryAccess());
 
-    public StoveRecipe(net.satisfy.bakery.recipe.StoveRecipe recipe) {
-        super(Emi_letsdo_compat.STOVE, recipe.getId(), 70, 18);
+    public StoveRecipe(EmiRecipeCategory category, net.satisfy.bakery.recipe.StoveRecipe recipe) {
+        super(category, recipe.getId(), 70, 18);
         var ingredients = recipe.getIngredients();
         for (var ingredient : ingredients) {
             this.inputs.add(EmiIngredient.of(ingredient));
