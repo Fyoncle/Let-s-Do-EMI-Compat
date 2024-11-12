@@ -1,0 +1,27 @@
+{
+  "emi.category.vinery.fermentation": "陈酿",
+  "emi.category.vinery.apple_mashing": "压榨苹果",
+  "emi.category.bakery.baking_station": "烘焙台",
+  "emi.category.bakery.crafting_bowl": "料理碗",
+  "emi.category.bakery.stove": "烤炉",
+  "emi.category.bakery.pot_cooking": "烹饪锅料理",
+  "emi.category.beachparty.mini_fridge_mixing": "小冰箱调配",
+  "emi.category.beachparty.tiki_bar_mixing": "提基吧台调配",
+  "emi.category.brewery.brewing": "酿造",
+  "emi.category.brewery.drying": "烘干",
+  "emi.category.candlelight.pan_cooking": "平底锅料理",
+  "emi.category.candlelight.pot_cooking": "汤锅料理",
+  "emi.category.herbalbrews.cauldron_brewing": "酿煮锅熬制",
+  "emi.category.herbalbrews.kettle_brewing": "茶壶熬制",
+  "emi.category.meadow.cheese": "奶酪成型",
+  "emi.category.meadow.cooking": "烹饪锅",
+  "emi.category.meadow.fondue": "奶酪火锅",
+  "emi.category.meadow.woodcutting": "切木台",
+
+  "emi.category.farm_and_charm.pot_cooking": "烹饪锅",
+  "emi.category.farm_and_charm.crafting_bowl": "混合碗",
+  "emi.category.farm_and_charm.mincer": "绞肉机",
+  "emi.category.farm_and_charm.roaster": "烘焙机",
+  "emi.category.farm_and_charm.drying": "风干",
+  "emi.category.farm_and_charm.stove": "火炉"
+}
