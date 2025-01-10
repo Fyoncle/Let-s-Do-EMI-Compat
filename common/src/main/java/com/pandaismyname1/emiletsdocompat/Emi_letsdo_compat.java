@@ -68,7 +68,7 @@ public class Emi_letsdo_compat implements EmiPlugin {
         }
 
         try {
-            Class.forName("net.satisfy.vinery.Vinery");
+            Class.forName("net.satisfy.vinery.core.Vinery");
             new com.pandaismyname1.emiletsdocompat.vinery.VineryCompat().init(registry, manager);
         } catch (ClassNotFoundException | NoSuchFieldException | NoSuchFieldError e) {
             // Vinery not found

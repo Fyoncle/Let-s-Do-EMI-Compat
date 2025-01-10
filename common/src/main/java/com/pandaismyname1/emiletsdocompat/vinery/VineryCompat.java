@@ -6,9 +6,9 @@ import dev.emi.emi.api.recipe.EmiRecipeCategory;
 import dev.emi.emi.api.stack.EmiStack;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.RecipeManager;
-import net.satisfy.vinery.Vinery;
-import net.satisfy.vinery.registry.ObjectRegistry;
-import net.satisfy.vinery.registry.RecipeTypesRegistry;
+import net.satisfy.vinery.core.Vinery;
+import net.satisfy.vinery.core.registry.ObjectRegistry;
+import net.satisfy.vinery.core.registry.RecipeTypesRegistry;
 
 public class VineryCompat implements IEmiModCompat {
     @Override
@@ -18,7 +18,7 @@ public class VineryCompat implements IEmiModCompat {
                     EmiStack.of(ObjectRegistry.FERMENTATION_BARREL.get()));
             registerRecipeType(registry, manager,
                     recipeCategory,
-                    (recipe) -> {registry.addRecipe(new FermentationRecipe(recipeCategory, (net.satisfy.vinery.recipe.FermentationBarrelRecipe) recipe));},
+                    (recipe) -> {registry.addRecipe(new FermentationRecipe(recipeCategory, (net.satisfy.vinery.core.recipe.FermentationBarrelRecipe) recipe));},
                     RecipeTypesRegistry.FERMENTATION_BARREL_RECIPE_TYPE.get(),
                     EmiStack.of(ObjectRegistry.FERMENTATION_BARREL.get()));
         } catch (NoSuchFieldError | NoSuchFieldException | ClassNotFoundException e) {
@@ -29,8 +29,19 @@ public class VineryCompat implements IEmiModCompat {
                     EmiStack.of(ObjectRegistry.APPLE_PRESS.get()));
             registerRecipeType(registry, manager,
                     recipeCategory,
-                    (recipe) -> {registry.addRecipe(new ApplePressingRecipe(recipeCategory, (net.satisfy.vinery.recipe.ApplePressRecipe) recipe));},
-                    RecipeTypesRegistry.APPLE_PRESS_RECIPE_TYPE.get(),
+                    (recipe) -> {registry.addRecipe(new ApplePressingRecipe(recipeCategory, (net.satisfy.vinery.core.recipe.ApplePressMashingRecipe) recipe));},
+                    RecipeTypesRegistry.APPLE_PRESS_MASHING_RECIPE_TYPE.get(),
+                    EmiStack.of(ObjectRegistry.APPLE_PRESS.get()));
+        } catch (NoSuchFieldError | NoSuchFieldException | ClassNotFoundException e) {
+        }
+
+        try {
+            var recipeCategory = new EmiRecipeCategory(new ResourceLocation(Vinery.MOD_ID, "apple_fermenting"),
+                    EmiStack.of(ObjectRegistry.FERMENTATION_BARREL.get()));
+            registerRecipeType(registry, manager,
+                    recipeCategory,
+                    (recipe) -> {registry.addRecipe(new AppleFermentationRecipe(recipeCategory, (net.satisfy.vinery.core.recipe.ApplePressFermentingRecipe) recipe));},
+                    RecipeTypesRegistry.APPLE_PRESS_FERMENTING_RECIPE_TYPE.get(),
                     EmiStack.of(ObjectRegistry.APPLE_PRESS.get()));
         } catch (NoSuchFieldError | NoSuchFieldException | ClassNotFoundException e) {
         }

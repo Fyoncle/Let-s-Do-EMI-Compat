@@ -17,7 +17,7 @@ public class FermentationRecipe extends BasicEmiRecipe {
             EnvExecutor.getEnvSpecific(() -> () -> () -> GameInstance.getClient().player.level().registryAccess(),
                     () -> () -> () -> GameInstance.getServer().registryAccess());
 
-    public FermentationRecipe(EmiRecipeCategory category, net.satisfy.vinery.recipe.FermentationBarrelRecipe recipe) {
+    public FermentationRecipe(EmiRecipeCategory category, net.satisfy.vinery.core.recipe.FermentationBarrelRecipe recipe) {
         super(category, recipe.getId(), 70, 18);
         var ingredients = recipe.getIngredients();
         for (var ingredient : ingredients) {

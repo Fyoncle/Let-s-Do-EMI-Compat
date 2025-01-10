@@ -34,7 +34,8 @@ public class HerbalbrewsCompat implements IEmiModCompat {
                         registry.addRecipe(new TeaKettleBrewingRecipe(recipeCategory, (satisfy.herbalbrews.recipe.TeaKettleRecipe) recipe));
                     },
                     satisfy.herbalbrews.registry.RecipeTypeRegistry.TEA_KETTLE_RECIPE_TYPE.get(),
-                    EmiStack.of(ObjectRegistry.TEA_KETTLE.get()));
+                    EmiStack.of(ObjectRegistry.TEA_KETTLE.get()),
+                    EmiStack.of(ObjectRegistry.COPPER_TEA_KETTLE.get()));
         } catch (NoSuchFieldError | NoSuchFieldException | ClassNotFoundException e) {
         }
     }
