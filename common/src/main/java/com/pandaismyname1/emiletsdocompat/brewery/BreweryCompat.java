@@ -27,7 +27,7 @@ public class BreweryCompat implements IEmiModCompat {
         }
 
         try {
-            var recipeCategory = new EmiRecipeCategory(new ResourceLocation(Brewery.MOD_ID, "fermenting"),
+            var recipeCategory = new EmiRecipeCategory(new ResourceLocation(Brewery.MOD_ID, "drying"),
                     EmiStack.of(net.satisfy.brewery.registry.ObjectRegistry.SILO_WOOD.get()));
             registerRecipeType(registry, manager,
                     recipeCategory,

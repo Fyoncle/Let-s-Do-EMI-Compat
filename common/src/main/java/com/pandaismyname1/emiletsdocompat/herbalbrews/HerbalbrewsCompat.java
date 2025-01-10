@@ -26,7 +26,7 @@ public class HerbalbrewsCompat implements IEmiModCompat {
         }
 
         try {
-            var recipeCategory = new EmiRecipeCategory(new ResourceLocation(HerbalBrews.MOD_ID, "kettle_brewing"),
+            var recipeCategory = new EmiRecipeCategory(new ResourceLocation(HerbalBrews.MOD_ID, "cooking"),
                     EmiStack.of(ObjectRegistry.TEA_KETTLE.get()));
             registerRecipeType(registry, manager,
                     recipeCategory,

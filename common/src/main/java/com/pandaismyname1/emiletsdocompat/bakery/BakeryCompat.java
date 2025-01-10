@@ -13,7 +13,7 @@ public class BakeryCompat implements IEmiModCompat {
 
     public void init(EmiRegistry registry, RecipeManager manager) throws NoSuchFieldException {
         try {
-            var recipeCategory = new EmiRecipeCategory(new ResourceLocation(Bakery.MOD_ID, "baking_station"),
+            var recipeCategory = new EmiRecipeCategory(new ResourceLocation(Bakery.MOD_ID, "caking"),
                     EmiStack.of(ObjectRegistry.BAKER_STATION.get()));
             registerRecipeType(registry, manager,
                     recipeCategory,
@@ -24,7 +24,7 @@ public class BakeryCompat implements IEmiModCompat {
         }
 
         try {
-            var recipeCategory = new EmiRecipeCategory(new ResourceLocation(Bakery.MOD_ID, "crafting_bowl"),
+            var recipeCategory = new EmiRecipeCategory(new ResourceLocation(Bakery.MOD_ID, "doughing"),
                     EmiStack.of(ObjectRegistry.CRAFTING_BOWL.get()));
             registerRecipeType(registry, manager,
                     recipeCategory,

@@ -14,7 +14,7 @@ public class VineryCompat implements IEmiModCompat {
     @Override
     public void init(EmiRegistry registry, RecipeManager manager) throws NoSuchFieldException {
         try {
-            var recipeCategory = new EmiRecipeCategory(new ResourceLocation(Vinery.MOD_ID, "fermentation"),
+            var recipeCategory = new EmiRecipeCategory(new ResourceLocation(Vinery.MOD_ID, "wine_fermentation"),
                     EmiStack.of(ObjectRegistry.FERMENTATION_BARREL.get()));
             registerRecipeType(registry, manager,
                     recipeCategory,
