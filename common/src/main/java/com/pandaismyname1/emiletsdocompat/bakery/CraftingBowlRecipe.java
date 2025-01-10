@@ -9,6 +9,7 @@ import dev.emi.emi.api.stack.EmiIngredient;
 import dev.emi.emi.api.stack.EmiStack;
 import dev.emi.emi.api.widget.WidgetHolder;
 import net.minecraft.core.RegistryAccess;
+import net.minecraft.resources.ResourceLocation;
 
 import java.util.function.Supplier;
 
@@ -16,6 +17,7 @@ public class CraftingBowlRecipe extends BasicEmiRecipe {
     protected static final Supplier<RegistryAccess> REGISTRY_ACCESS =
             EnvExecutor.getEnvSpecific(() -> () -> () -> GameInstance.getClient().player.level().registryAccess(),
                     () -> () -> () -> GameInstance.getServer().registryAccess());
+    public static final ResourceLocation TEXTURE = new ResourceLocation("bakery", "textures/gui/crafting_bowl.png");
 
     public CraftingBowlRecipe(EmiRecipeCategory category, net.satisfy.bakery.recipe.CraftingBowlRecipe recipe) {
         super(category, recipe.getId(), 70, 18);
@@ -28,16 +30,43 @@ public class CraftingBowlRecipe extends BasicEmiRecipe {
 
     @Override
     public void addWidgets(WidgetHolder widgets) {
-        DisplayUtils.CreateWidget(this, widgets, this.inputs, this.outputs);
+        widgets.addTexture(TEXTURE, 0,0,  124, 60, 26, 12);
+        widgets.addFillingArrow(52, 24, 5000);
+
+
+        if (!this.inputs.isEmpty()) {
+            var s = widgets.addSlot(this.inputs.get(0), 49 - 26 - 20, 24- 12);
+            s.drawBack(false);
+        }
+
+        if (this.inputs.size() > 1) {
+            var s= widgets.addSlot(this.inputs.get(1), 49 - 26, 42- 12);
+            s.drawBack(false);
+        }
+
+        if (this.inputs.size() > 2) {
+            var s= widgets.addSlot(this.inputs.get(1), 49 - 26 - 20, 42- 12);
+            s.drawBack(false);
+        }
+
+        if (this.inputs.size() > 3) {
+            var s= widgets.addSlot(this.inputs.get(1), 49 - 26, 42- 12);
+            s.drawBack(false);
+        }
+
+        if (!this.outputs.isEmpty()) {
+            var s = widgets.addSlot(this.outputs.get(0), 109 - 26, 34- 12);
+            s.drawBack(false);
+        }
     }
 
     @Override
     public int getDisplayHeight() {
-        return 40;
+        return 60;
     }
 
     @Override
     public int getDisplayWidth() {
-        return 140;
+        return 124;
     }
 }
