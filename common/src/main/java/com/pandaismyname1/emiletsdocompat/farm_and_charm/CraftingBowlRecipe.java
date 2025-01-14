@@ -30,32 +30,32 @@ public class CraftingBowlRecipe extends BasicEmiRecipe {
 
     @Override
     public void addWidgets(WidgetHolder widgets) {
-        widgets.addTexture(TEXTURE, 0,0,  124, 60, 26, 12);
-        widgets.addFillingArrow(52, 24, 5000);
+        widgets.addTexture(TEXTURE, 0,0,  124, 60, 16, 12);
+        widgets.addFillingArrow(62, 24, 5000);
 
 
         if (!this.inputs.isEmpty()) {
-            var s = widgets.addSlot(this.inputs.get(0), 49 - 26 - 20, 24- 12);
+            var s = widgets.addSlot(this.inputs.get(0), 13, 12);
             s.drawBack(false);
         }
 
         if (this.inputs.size() > 1) {
-            var s= widgets.addSlot(this.inputs.get(1), 49 - 26, 42- 12);
+            var s= widgets.addSlot(this.inputs.get(1), 33, 12);
             s.drawBack(false);
         }
 
         if (this.inputs.size() > 2) {
-            var s= widgets.addSlot(this.inputs.get(1), 49 - 26 - 20, 42- 12);
+            var s= widgets.addSlot(this.inputs.get(1), 13, 30);
             s.drawBack(false);
         }
 
         if (this.inputs.size() > 3) {
-            var s= widgets.addSlot(this.inputs.get(1), 49 - 26, 42- 12);
+            var s= widgets.addSlot(this.inputs.get(1), 33, 30);
             s.drawBack(false);
         }
 
         if (!this.outputs.isEmpty()) {
-            var s = widgets.addSlot(this.outputs.get(0), 109 - 26, 34- 12);
+            var s = widgets.addSlot(this.outputs.get(0), 93, 22);
             s.drawBack(false);
         }
     }
