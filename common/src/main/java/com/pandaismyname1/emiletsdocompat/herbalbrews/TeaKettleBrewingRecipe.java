@@ -9,6 +9,7 @@ import dev.emi.emi.api.stack.EmiIngredient;
 import dev.emi.emi.api.stack.EmiStack;
 import dev.emi.emi.api.widget.WidgetHolder;
 import net.minecraft.core.RegistryAccess;
+import net.minecraft.resources.ResourceLocation;
 
 import java.util.function.Supplier;
 
@@ -16,6 +17,7 @@ public class TeaKettleBrewingRecipe extends BasicEmiRecipe {
     protected static final Supplier<RegistryAccess> REGISTRY_ACCESS =
             EnvExecutor.getEnvSpecific(() -> () -> () -> GameInstance.getClient().player.level().registryAccess(),
                     () -> () -> () -> GameInstance.getServer().registryAccess());
+    public static final ResourceLocation TEXTURE = new ResourceLocation("herbalbrews", "textures/gui/tea_kettle.png");
 
     public TeaKettleBrewingRecipe(EmiRecipeCategory category, satisfy.herbalbrews.recipe.TeaKettleRecipe recipe) {
         super(category, recipe.getId(), 70, 18);
@@ -28,16 +30,55 @@ public class TeaKettleBrewingRecipe extends BasicEmiRecipe {
 
     @Override
     public void addWidgets(WidgetHolder widgets) {
-        DisplayUtils.CreateWidget(this, widgets, this.inputs, this.outputs);
+        widgets.addTexture(TEXTURE, 0,0,  124, 60, 26, 12);
+        widgets.addAnimatedTexture(TEXTURE, 67,3, 19, 29, 176, 16, 5000, true, false, false);
+        widgets.addAnimatedTexture(TEXTURE, 98, 44, 16, 14, 176, 0, 5000, false, true, false);
+
+
+
+        if (!this.inputs.isEmpty()) {
+            var s = widgets.addSlot(this.inputs.get(0), 3, 4);
+            s.drawBack(false);
+        }
+
+        if (this.inputs.size() > 1) {
+            var s= widgets.addSlot(this.inputs.get(1), 21, 4);
+            s.drawBack(false);
+        }
+
+        if (this.inputs.size() > 2) {
+            var s= widgets.addSlot(this.inputs.get(1), 39, 4);
+            s.drawBack(false);
+        }
+
+        if (this.inputs.size() > 3) {
+            var s= widgets.addSlot(this.inputs.get(1), 3, 22);
+            s.drawBack(false);
+        }
+
+        if (this.inputs.size() > 3) {
+            var s= widgets.addSlot(this.inputs.get(1), 21, 22);
+            s.drawBack(false);
+        }
+
+        if (this.inputs.size() > 3) {
+            var s= widgets.addSlot(this.inputs.get(1), 39, 22);
+            s.drawBack(false);
+        }
+
+        if (!this.outputs.isEmpty()) {
+            var s = widgets.addSlot(this.outputs.get(0), 97, 15);
+            s.drawBack(false);
+        }
     }
 
     @Override
     public int getDisplayHeight() {
-        return 40;
+        return 60;
     }
 
     @Override
     public int getDisplayWidth() {
-        return 140;
+        return 124;
     }
 }
