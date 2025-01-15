@@ -28,16 +28,23 @@ public class WoodcuttingRecipe extends BasicEmiRecipe {
 
     @Override
     public void addWidgets(WidgetHolder widgets) {
-        DisplayUtils.CreateWidget(this, widgets, this.inputs, this.outputs);
+        widgets.addFillingArrow(50, 21, 5000);
+
+        if (this.inputs.size() > 0) {
+            widgets.addSlot(this.inputs.get(0), 23, 21);
+        }
+        if (this.outputs.size() > 0) {
+            widgets.addSlot(this.outputs.get(0), 83, 21);
+        }
     }
 
     @Override
     public int getDisplayHeight() {
-        return 40;
+        return 60;
     }
 
     @Override
     public int getDisplayWidth() {
-        return 140;
+        return 124;
     }
 }
