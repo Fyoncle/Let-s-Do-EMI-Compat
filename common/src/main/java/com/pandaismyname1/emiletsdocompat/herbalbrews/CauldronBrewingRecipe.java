@@ -47,12 +47,12 @@ public class CauldronBrewingRecipe extends BasicEmiRecipe {
         }
 
         if (this.inputs.size() > 2) {
-            var s= widgets.addSlot(this.inputs.get(1), 6, 31);
+            var s= widgets.addSlot(this.inputs.get(2), 6, 31);
             s.drawBack(false);
         }
 
         if (this.inputs.size() > 3) {
-            var s= widgets.addSlot(this.inputs.get(1), 24, 31);
+            var s= widgets.addSlot(this.inputs.get(3), 24, 31);
             s.drawBack(false);
         }
 

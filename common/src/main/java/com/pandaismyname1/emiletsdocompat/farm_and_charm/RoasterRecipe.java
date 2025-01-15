@@ -50,22 +50,22 @@ public class RoasterRecipe extends BasicEmiRecipe {
         }
 
         if (this.inputs.size() > 2) {
-            var s= widgets.addSlot(this.inputs.get(1), 39, 4);
+            var s= widgets.addSlot(this.inputs.get(2), 39, 4);
             s.drawBack(false);
         }
 
         if (this.inputs.size() > 3) {
-            var s= widgets.addSlot(this.inputs.get(1), 3, 22);
+            var s= widgets.addSlot(this.inputs.get(3), 3, 22);
             s.drawBack(false);
         }
 
-        if (this.inputs.size() > 3) {
-            var s= widgets.addSlot(this.inputs.get(1), 21, 22);
+        if (this.inputs.size() > 4) {
+            var s= widgets.addSlot(this.inputs.get(4), 21, 22);
             s.drawBack(false);
         }
 
-        if (this.inputs.size() > 3) {
-            var s= widgets.addSlot(this.inputs.get(1), 39, 22);
+        if (this.inputs.size() > 5) {
+            var s= widgets.addSlot(this.inputs.get(5), 39, 22);
             s.drawBack(false);
         }
 

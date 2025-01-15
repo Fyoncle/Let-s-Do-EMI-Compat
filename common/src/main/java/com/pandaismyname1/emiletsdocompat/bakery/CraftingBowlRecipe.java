@@ -45,12 +45,12 @@ public class CraftingBowlRecipe extends BasicEmiRecipe {
         }
 
         if (this.inputs.size() > 2) {
-            var s= widgets.addSlot(this.inputs.get(1), 13, 30);
+            var s= widgets.addSlot(this.inputs.get(2), 13, 30);
             s.drawBack(false);
         }
 
         if (this.inputs.size() > 3) {
-            var s= widgets.addSlot(this.inputs.get(1), 33, 30);
+            var s= widgets.addSlot(this.inputs.get(3), 33, 30);
             s.drawBack(false);
         }
 
