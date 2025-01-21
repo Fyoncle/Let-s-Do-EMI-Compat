@@ -37,7 +37,7 @@ public class VineryCompat implements IEmiModCompat {
 
         try {
             var recipeCategory = new EmiRecipeCategory(new ResourceLocation(Vinery.MOD_ID, "apple_fermenting"),
-                    EmiStack.of(ObjectRegistry.FERMENTATION_BARREL.get()));
+                    EmiStack.of(ObjectRegistry.APPLE_PRESS.get()));
             registerRecipeType(registry, manager,
                     recipeCategory,
                     (recipe) -> {registry.addRecipe(new AppleFermentationRecipe(recipeCategory, (net.satisfy.vinery.core.recipe.ApplePressFermentingRecipe) recipe));},
