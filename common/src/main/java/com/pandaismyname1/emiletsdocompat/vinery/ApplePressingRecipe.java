@@ -30,7 +30,7 @@ public class ApplePressingRecipe extends BasicEmiRecipe {
 
     @Override
     public void addWidgets(WidgetHolder widgets) {
-        widgets.addTexture(TEXTURE, 15,5,  25, 50, 40, 17);
+        widgets.addTexture(TEXTURE, 13,3,  28, 54, 38, 15);
         widgets.addAnimatedTexture(TEXTURE, 15,5, 25, 38, 176, 0, 5000, false, false, false);
         widgets.addFillingArrow(48, 25, 5000);
         widgets.addTexture(TEXTURE, 80,25,  36, 18, 100, 49);
